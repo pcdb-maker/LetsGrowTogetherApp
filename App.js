@@ -1,5 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import IntroScreen from './screens/IntroScreen';
+import WaterReminder from './screens/WaterReminder';
+import HabitTracker from './screens/HabitTracker';
+import MotivationQuotes from './screens/MotivationQuotes';
+
+const Stack = createNativeStackNavigator();
+
+console.log("I am working")
 
 export default function App() {
   return (
