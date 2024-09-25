@@ -12,10 +12,14 @@ console.log("I am working")
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="IntroScreen">
+        <Stack.Screen name="IntroScreen" component={IntroScreen} />
+        <Stack.Screen name="WaterReminder" component={WaterReminder} />
+        <Stack.Screen name="HabitTracker" component={HabitTracker} />
+        <Stack.Screen name="MotivationQuotes" component={MotivationQuotes} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
