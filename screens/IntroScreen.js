@@ -11,8 +11,6 @@ export default function IntroScreen({ navigation }) {
       </View>
       <View style={styles.buttonContainer}>
       </View>
-      <View style={styles.buttonContainer}>
-        <Button title="Motivational Quotes" onPress={() => navigation.navigate('MotivationQuotes')} />
       </View>
     </View>
   );
