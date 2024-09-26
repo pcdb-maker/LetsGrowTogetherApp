@@ -56,3 +56,9 @@ export default function PlantGrowth({ navigation }) {
     determineGrowthStage();
   }, [tokens]);
 
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+        <Icon name="arrow-back" size={24} color="#ffffff" />
+      </TouchableOpacity>
+
