@@ -3,3 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/MaterialIcons'; // Import icon library for back button
 
+export default function SensoryBreak({ navigation }) {
+  const [activity, setActivity] = useState('');
+  const [tokens, setTokens] = useState(0);
+
