@@ -12,7 +12,6 @@ export default function IntroScreen({ navigation }) {
       <View style={styles.buttonContainer}>
       </View>
       </View>
-    </View>
   );
 }
 
