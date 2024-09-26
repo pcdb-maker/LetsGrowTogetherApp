@@ -48,6 +48,13 @@ export default function WaterReminder({ navigation }) {
       console.log('Goal met! Tokens:', tokens + 1);
     }
   };
+
+  const incrementGlass = () => {
+    if (glasses < goal) {
+      setGlasses(prev => prev + 1);
+    }
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Remember to drink water!</Text>
