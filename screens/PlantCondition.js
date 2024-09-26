@@ -13,3 +13,10 @@ export default function PlantGrowth({ navigation }) {
   const [currentStage, setCurrentStage] = useState({});
   const [nextStageTokens, setNextStageTokens] = useState(0);
 
+  const plantStages = [
+    { stage: 'seed', minTokens: 0, maxTokens: 4, image: seedImage },
+    { stage: 'sprout', minTokens: 5, maxTokens: 9, image: sproutImage },
+    { stage: 'small-plant', minTokens: 10, maxTokens: 14, image: smallPlantImage },
+    { stage: 'grown-plant', minTokens: 15, image: grownPlantImage },
+  ];
+
