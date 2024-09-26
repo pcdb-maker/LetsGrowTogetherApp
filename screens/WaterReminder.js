@@ -81,6 +81,16 @@ export default function WaterReminder({ navigation }) {
         {glasses}/{goal} Glasses
       </Text>
 
+      <View style={styles.progressBar}>
+        <Animated.View
+          style={[styles.progressFill, { width: progressAnim.interpolate({
+              inputRange: [0, 1],
+              outputRange: ['0%', '100%']
+            }) 
+          }]}
+        />
+      </View>
+
     </View>
   );
 }
