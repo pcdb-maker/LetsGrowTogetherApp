@@ -46,6 +46,13 @@ export default function HabitTracker({ navigation }) {
     );
 
     updateTokens(1); // Add 1 token when a task is completed
+    console.log('Task completed! Tokens:', tokens + 1);
+  };
+
+  useEffect(() => {
+    loadTokens(); // Load tokens when the component mounts
+  }, []);
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Track your good habits!</Text>
