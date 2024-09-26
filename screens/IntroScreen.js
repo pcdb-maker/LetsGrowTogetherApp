@@ -10,7 +10,6 @@ export default function IntroScreen({ navigation }) {
         <Button title="Water Reminder" onPress={() => navigation.navigate('WaterReminder')} />
       </View>
       <View style={styles.buttonContainer}>
-        <Button title="Habit Tracker" onPress={() => navigation.navigate('HabitTracker')} />
       </View>
       <View style={styles.buttonContainer}>
         <Button title="Motivational Quotes" onPress={() => navigation.navigate('MotivationQuotes')} />
