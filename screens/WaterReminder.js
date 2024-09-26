@@ -21,6 +21,17 @@ export default function WaterReminder({ navigation }) {
     }
   };
 
+  // Save total tokens to AsyncStorage
+  const updateTokens = async (newTokens) => {
+    try {
+      const savedTokens = await AsyncStorage.getItem('totalTokens');
+      const currentTokens = savedTokens ? parseInt(savedTokens) : 0;
+      const updatedTokens = currentTokens + newTokens;
+      await AsyncStorage.setItem('totalTokens', updatedTokens.toString());
+      setTokens(updatedTokens);
+    } catch (error) {
+      console.error('Failed to update tokens:', error);
+    }
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Remember to drink water!</Text>
