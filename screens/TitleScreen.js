@@ -52,3 +52,12 @@ export default function TitleScreen({ navigation }) {
       <Text style={styles.paragraph}>
         Track, log, and organise your way to success, and watch your plant grow along with you.
       </Text>
+          <TouchableOpacity style={styles.continueButton} onPress={startAnimation}>
+            <Text style={styles.buttonText}>Get Started...</Text>
+          </TouchableOpacity>
+          <FloatingButton onPress={() => navigation.navigate('AccessibilitySettings')} /> {/* Floating Button */}
+        </>
+      )}
+    </View>
+  );
+}
