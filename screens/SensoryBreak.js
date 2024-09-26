@@ -36,3 +36,16 @@ export default function SensoryBreak({ navigation }) {
     }
   };
 
+  // Save total tokens to AsyncStorage
+  const updateTokens = async (newTokens) => {
+    try {
+      const savedTokens = await AsyncStorage.getItem('totalTokens');
+      const currentTokens = savedTokens ? parseInt(savedTokens) : 0;
+      const updatedTokens = currentTokens + newTokens;
+      await AsyncStorage.setItem('totalTokens', updatedTokens.toString());
+      setTokens(updatedTokens); // Update local state as well
+    } catch (error) {
+      console.error('Failed to update tokens:', error);
+    }
+  };
+
