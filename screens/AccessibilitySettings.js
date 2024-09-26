@@ -11,3 +11,9 @@ export default function AccessibilitySettings({ navigation }) {
     <View style={styles.container}>
       {/* Close Button in Top Left */}
       <TouchableOpacity style={styles.closeButton} onPress={() => navigation.goBack()}>
+        <Icon name="close" size={24} color="#ffffff" />
+      </TouchableOpacity>
+      
+      <Text style={styles.title}>Accessibility Settings</Text>
+
+      {/* Accessibility Options */}
