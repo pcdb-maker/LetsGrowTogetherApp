@@ -5,7 +5,6 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 export default function IntroScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to the Executive FUNction Application.</Text>
       <Text style={styles.paragraph}>When it comes to health and fitness, having a growth mindset is incredibly important. People with a growth mindset tend to embrace challenges and setbacks, seeing them as opportunities for growth and learning.</Text>
       <View style={styles.buttonContainer}>
         <Button title="Water Reminder" onPress={() => navigation.navigate('WaterReminder')} />
