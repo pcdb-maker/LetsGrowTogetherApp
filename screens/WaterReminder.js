@@ -100,6 +100,8 @@ export default function WaterReminder({ navigation }) {
           <Text style={styles.buttonText}>Remove Glass</Text>
         </TouchableOpacity>
       </View>
+
+      <Text style={styles.tokenText}>Tokens Collected: {tokens}</Text>
     </View>
   );
 }
