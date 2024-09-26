@@ -37,6 +37,15 @@ export default function HabitTracker({ navigation }) {
     }
   };
 
+  // Handle task completion and log token
+  const handleTaskCompletion = (taskId) => {
+    setTasks(prevTasks =>
+      prevTasks.map(task =>
+        task.id === taskId ? { ...task, completed: true } : task
+      )
+    );
+
+    updateTokens(1); // Add 1 token when a task is completed
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Track your good habits!</Text>
