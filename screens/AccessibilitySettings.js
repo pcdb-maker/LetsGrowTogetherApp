@@ -42,3 +42,17 @@ export default function AccessibilitySettings({ navigation }) {
   );
 }
 
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: 'center', padding: 20, backgroundColor: '#f0f4f8' },
+  title: { fontSize: 24, fontWeight: 'bold', marginBottom: 20, textAlign: 'center', color: '#333' },
+  option: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 15 },
+  optionText: { fontSize: 18, color: '#333' },
+  closeButton: {
+    position: 'absolute',
+    top: 40, // Adjust for top position
+    left: 20, // Adjust for left position
+    backgroundColor: '#6c63ff',
+    padding: 10,
+    borderRadius: 20,
+  },
+});
