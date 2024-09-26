@@ -14,3 +14,14 @@ export default function TitleScreen({ navigation }) {
         toValue: 1,
         duration: 10, // Reduced duration for quicker fade-in
         useNativeDriver: true,
+      }),
+      Animated.spring(scaleAnim, {
+        toValue: 1,
+        friction: 7, // Adds a spring effect for scaling
+        useNativeDriver: true,
+      }),
+    ]).start(() => {
+      navigation.navigate('IntroScreen');
+    });
+  };
+
