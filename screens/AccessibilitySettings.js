@@ -30,3 +30,15 @@ export default function AccessibilitySettings({ navigation }) {
           value={largeText}
           onValueChange={(value) => setLargeText(value)}
         />
+      </View>
+      <View style={styles.option}>
+        <Text style={styles.optionText}>Neurodiversity Mode</Text>
+        <Switch
+          value={neurodiversityMode}
+          onValueChange={(value) => setNeurodiversityMode(value)}
+        />
+      </View>
+    </View>
+  );
+}
+
