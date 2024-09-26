@@ -61,6 +61,18 @@ export default function HabitTracker({ navigation }) {
         <Icon name="arrow-back" size={24} color="#ffffff" />
       </TouchableOpacity>
 
+      <Text style={styles.title}>Daily Task Tracker</Text>
+
+      <FlatList
+        data={tasks}
+        keyExtractor={item => item.id}
+        renderItem={({ item }) => (
+          <View style={styles.taskContainer}>
+            <Text style={[styles.taskText, item.completed && styles.completedTask]}>
+              {item.title}
+            </Text>
+            {!item.completed && (
+              <TouchableOpacity style={styles.completeButton} onPress={() => handleTaskCompletion(item.id)}>
     </View>
   );
 }
