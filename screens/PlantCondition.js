@@ -8,3 +8,8 @@ import sproutImage from '../images/sprout.png';
 import smallPlantImage from '../images/small-plant.png';
 import grownPlantImage from '../images/grown-plant.png';
 
+export default function PlantGrowth({ navigation }) {
+  const [tokens, setTokens] = useState(0);
+  const [currentStage, setCurrentStage] = useState({});
+  const [nextStageTokens, setNextStageTokens] = useState(0);
+
