@@ -25,3 +25,12 @@ export default function TitleScreen({ navigation }) {
     });
   };
 
+  return (
+    <View style={styles.container}>
+      {showAnimation ? (
+        <Animated.Text
+          style={[
+            styles.title,
+            {
+              opacity: fadeAnim,
+              transform: [{ scale: scaleAnim }], // Apply both opacity and scale transformations
