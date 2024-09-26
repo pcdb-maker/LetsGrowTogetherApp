@@ -4,6 +4,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default function WaterReminder({ navigation }) {
+  const [glasses, setGlasses] = useState(0);
+  const [tokens, setTokens] = useState(0);
+  const goal = 8;
+  const progressAnim = useRef(new Animated.Value(0)).current;
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Remember to drink water!</Text>
