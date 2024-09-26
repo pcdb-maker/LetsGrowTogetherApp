@@ -44,3 +44,11 @@ export default function TitleScreen({ navigation }) {
           <Text style={styles.title}>Executive FUNction App</Text>
          <br></br>
       <Text style={styles.paragraph}>
+        We understand that people who identify as neurodiverse can struggle with executive functioning.
+      </Text>
+      <Text style={styles.paragraph}>
+        This app aims to make functioning <Text style={styles.bold}>fun</Text> again!
+      </Text>
+      <Text style={styles.paragraph}>
+        Track, log, and organise your way to success, and watch your plant grow along with you.
+      </Text>
