@@ -1,7 +1,15 @@
-import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default function HabitTracker({ navigation }) {
+  const [tasks, setTasks] = useState([
+    { id: '1', title: 'Complete Morning Routine', completed: false },
+    { id: '2', title: 'Exercise for 30 Minutes', completed: false },
+    { id: '3', title: 'Read a Book', completed: false },
+    { id: '4', title: 'Plan Tomorrow’s Schedule', completed: false },
+  ]);
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Track your good habits!</Text>
