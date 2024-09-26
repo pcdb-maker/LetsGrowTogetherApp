@@ -91,6 +91,15 @@ export default function WaterReminder({ navigation }) {
         />
       </View>
 
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity style={styles.button} onPress={incrementGlass}>
+          <Text style={styles.buttonText}>Add Glass</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={[styles.button, styles.removeButton]} onPress={decrementGlass}>
+          <Text style={styles.buttonText}>Remove Glass</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
