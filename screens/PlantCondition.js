@@ -78,3 +78,13 @@ export default function PlantGrowth({ navigation }) {
         />
       )}
 
+      <TouchableOpacity style={styles.button} onPress={loadTokens}>
+        <Text style={styles.buttonText}>Refresh Plant</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={[styles.button, styles.resetButton]} onPress={resetTokens}>
+        <Text style={styles.buttonText}>Reset Tokens</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
