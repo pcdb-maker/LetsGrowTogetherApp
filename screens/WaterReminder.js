@@ -41,6 +41,13 @@ export default function WaterReminder({ navigation }) {
       useNativeDriver: false,
     }).start();
   };
+
+  const checkGoalMet = () => {
+    if (glasses === goal) {
+      updateTokens(1); // Add 1 token when goal is met
+      console.log('Goal met! Tokens:', tokens + 1);
+    }
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Remember to drink water!</Text>
