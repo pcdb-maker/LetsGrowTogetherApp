@@ -72,3 +72,9 @@ export default function PlantGrowth({ navigation }) {
       )}
 
       {currentStage.image && (
+        <Image
+          source={currentStage.image}
+          style={styles.plantImage}
+        />
+      )}
+
