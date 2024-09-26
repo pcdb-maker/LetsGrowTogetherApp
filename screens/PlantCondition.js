@@ -88,3 +88,31 @@ export default function PlantGrowth({ navigation }) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20, backgroundColor: '#f0f4f8' },
+  title: { fontSize: 28, fontWeight: 'bold', marginBottom: 10, color: '#2d2d2d' },
+  subtitle: { fontSize: 18, marginBottom: 10, color: '#4a4a4a' },
+  plantImage: { width: 200, height: 200, marginBottom: 20, resizeMode: 'contain' },
+  button: {
+    backgroundColor: '#6c63ff',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 25,
+    alignItems: 'center',
+    width: '60%',
+  },
+  buttonText: { color: '#ffffff', fontSize: 16, fontWeight: 'bold' },
+  backButton: {
+    position: 'absolute',
+    top: 40,
+    left: 20,
+    backgroundColor: '#6c63ff',
+    padding: 10,
+    borderRadius: 20,
+  },
+  resetButton: {
+    backgroundColor: '#ff6b6b', // Different color for reset button
+    marginTop: 20,
+  },
+});
