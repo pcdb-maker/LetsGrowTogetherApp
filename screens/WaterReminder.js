@@ -55,6 +55,13 @@ export default function WaterReminder({ navigation }) {
     }
   };
 
+  const decrementGlass = () => {
+    if (glasses > 0) {
+      setGlasses(prev => prev - 1);
+    }
+  };
+
+  useEffect(() => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Remember to drink water!</Text>
