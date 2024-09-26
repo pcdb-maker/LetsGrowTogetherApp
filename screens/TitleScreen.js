@@ -61,3 +61,18 @@ export default function TitleScreen({ navigation }) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#4e54c8' },
+  title: { fontSize: 30, fontWeight: 'bold', color: '#ffffff', textAlign: 'center' },
+  paragraph: { fontSize: 16, textAlign: 'center', marginBottom: 15, paddingHorizontal: 20, color: '#ffffff' },
+  bold: { fontWeight: 'bold', color: '#ffffff' },
+  continueButton: {
+    backgroundColor: '#ffffff',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 20,
+    marginTop: 20,
+  },
+  buttonText: { color: '#4e54c8', fontSize: 16, fontWeight: 'bold' },
+});
