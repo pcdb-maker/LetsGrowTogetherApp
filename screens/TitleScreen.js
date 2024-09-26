@@ -34,3 +34,13 @@ export default function TitleScreen({ navigation }) {
             {
               opacity: fadeAnim,
               transform: [{ scale: scaleAnim }], // Apply both opacity and scale transformations
+            },
+          ]}
+        >
+          Executive FUNction App
+        </Animated.Text>
+      ) : (
+        <>
+          <Text style={styles.title}>Executive FUNction App</Text>
+         <br></br>
+      <Text style={styles.paragraph}>
