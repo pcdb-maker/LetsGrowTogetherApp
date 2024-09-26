@@ -72,6 +72,15 @@ export default function WaterReminder({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+        <Icon name="arrow-back" size={24} color="#ffffff" />
+      </TouchableOpacity>
+
+      <Text style={styles.title}>Water Tracker</Text>
+      <Text style={styles.text}>
+        {glasses}/{goal} Glasses
+      </Text>
+
     </View>
   );
 }
