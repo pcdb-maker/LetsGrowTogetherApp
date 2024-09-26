@@ -49,3 +49,16 @@ export default function SensoryBreak({ navigation }) {
     }
   };
 
+  // Confirm completion of the sensory break activity
+  const confirmCompletion = () => {
+    updateTokens(1); // Increment total tokens by 1
+    console.log('Sensory break completed! Tokens:', tokens + 1);
+  };
+
+  // Load tokens and set initial activity on component mount
+  useEffect(() => {
+    loadTokens();
+    getRandomActivity();
+  }, []);
+
+  return (
