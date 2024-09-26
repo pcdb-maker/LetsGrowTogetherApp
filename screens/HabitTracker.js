@@ -88,4 +88,36 @@ export default function HabitTracker({ navigation }) {
 const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   text: { fontSize: 20, marginBottom: 20 },
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20, backgroundColor: '#f0f4f8' },
+  title: { fontSize: 28, fontWeight: 'bold', marginBottom: 20, color: '#2d2d2d' },
+  taskContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 15,
+    marginBottom: 10,
+    backgroundColor: '#ffffff',
+    borderRadius: 10,
+    width: '90%',
+    borderWidth: 1,
+    borderColor: '#e0e0e0',
+  },
+  taskText: { fontSize: 18
+  },
+  taskText: { fontSize: 18, color: '#333' },
+  completedTask: { textDecorationLine: 'line-through', color: '#aaa' },
+  completeButton: {
+    backgroundColor: '#6c63ff',
+    paddingVertical: 8,
+    paddingHorizontal: 15,
+    borderRadius: 25,
+  },
+  buttonText: { color: '#ffffff', fontSize: 14, fontWeight: 'bold' },
+  tokenText: { fontSize: 18, fontWeight: 'bold', marginTop: 20, color: '#4a4a4a' },
+  backButton: {
+    position: 'absolute',
+    top: 40,
+    left: 20,
+    backgroundColor: '#6c63ff',
+    padding: 10,
 });
