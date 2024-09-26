@@ -55,8 +55,6 @@ export default function HabitTracker({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Track your good habits!</Text>
-      <Button title="Back to Home" onPress={() => navigation.navigate('IntroScreen')} />
       <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
         <Icon name="arrow-back" size={24} color="#ffffff" />
       </TouchableOpacity>
@@ -86,8 +84,6 @@ export default function HabitTracker({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  text: { fontSize: 20, marginBottom: 20 },
   container: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20, backgroundColor: '#f0f4f8' },
   title: { fontSize: 28, fontWeight: 'bold', marginBottom: 20, color: '#2d2d2d' },
   taskContainer: {
