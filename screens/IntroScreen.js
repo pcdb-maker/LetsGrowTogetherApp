@@ -5,11 +5,46 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 export default function IntroScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.paragraph}>When it comes to health and fitness, having a growth mindset is incredibly important. People with a growth mindset tend to embrace challenges and setbacks, seeing them as opportunities for growth and learning.</Text>
-      <View style={styles.buttonContainer}>
-        <Button title="Water Reminder" onPress={() => navigation.navigate('WaterReminder')} />
-      </View>
-      <View style={styles.buttonContainer}>
+      {/* Back Button in Top Left */}
+      <TouchableOpacity
+  style={styles.backButton}
+  onPress={() => navigation.reset({
+    index: 0,
+    routes: [{ name: 'TitleScreen' }],
+  })}
+>
+  <Icon name="arrow-back" size={24} color="#ffffff" />
+</TouchableOpacity>
+
+      {/* Content Wrapper to Move Everything Down */}
+      <View style={styles.contentWrapper}>
+        <Text style={styles.title}>Welcome to the Executive FUNction Application.</Text>
+        <Text style={styles.paragraph}>
+        Designed to keep you encouraged while you maintain positive habits. Logging daily habits like drinking water and completing tasks will help both you and your plant grow.
+        <br></br> Log your daily positive habits with the purple button, and check on your plant on the green "streak" button. 
+        </Text>
+
+        {/* Buttons */}
+        <View style={styles.buttonWrapper}>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('WaterReminder')}>
+            <Text style={styles.buttonText}>Water Logger</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.buttonWrapper}>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('HabitTracker')}>
+            <Text style={styles.buttonText}>Habit Tracker</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.buttonWrapper}>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SensoryBreak')}>
+            <Text style={styles.buttonText}>Sensory Break</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.buttonWrapper}>
+          <TouchableOpacity style={[styles.button, styles.greenButton]} onPress={() => navigation.navigate('PlantCondition')}>
+            <Text style={styles.buttonText}>Plant Streak</Text>
+          </TouchableOpacity>
+        </View>
       </View>
       </View>
   );
