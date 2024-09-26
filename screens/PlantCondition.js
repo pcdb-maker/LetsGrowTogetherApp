@@ -48,3 +48,11 @@ export default function PlantGrowth({ navigation }) {
     setNextStageTokens(nextStage ? nextStage.minTokens - tokens : 0);
   };
 
+  useEffect(() => {
+    loadTokens();
+  }, []);
+
+  useEffect(() => {
+    determineGrowthStage();
+  }, [tokens]);
+
