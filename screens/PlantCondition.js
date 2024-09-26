@@ -30,3 +30,14 @@ export default function PlantGrowth({ navigation }) {
       console.error('Failed to load tokens:', error);
     }
   };
+
+  const resetTokens = async () => {
+    try {
+      await AsyncStorage.setItem('totalTokens', '0');
+      setTokens(0);
+      console.log('Tokens reset to 0.');
+    } catch (error) {
+      console.error('Failed to reset tokens:', error);
+    }
+  };
+
