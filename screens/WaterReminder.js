@@ -62,6 +62,14 @@ export default function WaterReminder({ navigation }) {
   };
 
   useEffect(() => {
+    loadTokens();
+  }, []);
+
+  useEffect(() => {
+    animateProgress();
+    checkGoalMet();
+  }, [glasses]);
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Remember to drink water!</Text>
