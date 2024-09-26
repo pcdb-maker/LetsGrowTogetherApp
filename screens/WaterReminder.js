@@ -32,6 +32,15 @@ export default function WaterReminder({ navigation }) {
     } catch (error) {
       console.error('Failed to update tokens:', error);
     }
+  };
+
+  const animateProgress = () => {
+    Animated.timing(progressAnim, {
+      toValue: glasses / goal,
+      duration: 500,
+      useNativeDriver: false,
+    }).start();
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Remember to drink water!</Text>
