@@ -18,3 +18,21 @@ export default function SensoryBreak({ navigation }) {
     'Drink a glass of water slowly',
   ];
 
+  // Function to select a random sensory break
+  const getRandomActivity = () => {
+    const randomIndex = Math.floor(Math.random() * sensoryBreaks.length);
+    setActivity(sensoryBreaks[randomIndex]);
+  };
+
+  // Load total tokens from AsyncStorage
+  const loadTokens = async () => {
+    try {
+      const savedTokens = await AsyncStorage.getItem('totalTokens');
+      if (savedTokens !== null) {
+        setTokens(parseInt(savedTokens));
+      }
+    } catch (error) {
+      console.error('Failed to load tokens:', error);
+    }
+  };
+
