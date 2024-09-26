@@ -120,4 +120,7 @@ const styles = StyleSheet.create({
     left: 20,
     backgroundColor: '#6c63ff',
     padding: 10,
+    borderRadius: 20,
+    zIndex: 1000,
+  },
 });
