@@ -6,3 +6,11 @@ export default function TitleScreen({ navigation }) {
   const [showAnimation, setShowAnimation] = useState(false);
   const fadeAnim = new Animated.Value(0); // Initial opacity value
   const scaleAnim = new Animated.Value(0.5); // Initial scale value
+
+  const startAnimation = () => {
+    setShowAnimation(true);
+    Animated.parallel([
+      Animated.timing(fadeAnim, {
+        toValue: 1,
+        duration: 10, // Reduced duration for quicker fade-in
+        useNativeDriver: true,
