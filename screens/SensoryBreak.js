@@ -66,3 +66,19 @@ export default function SensoryBreak({ navigation }) {
       <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
         <Icon name="arrow-back" size={24} color="#ffffff" />
       </TouchableOpacity>
+
+      <Text style={styles.title}>Sensory Break</Text>
+      <Text style={styles.activityText}>{activity}</Text>
+
+      <TouchableOpacity style={styles.button} onPress={confirmCompletion}>
+        <Text style={styles.buttonText}>I Did It!</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button} onPress={getRandomActivity}>
+        <Text style={styles.buttonText}>New Activity</Text>
+      </TouchableOpacity>
+
+      <Text style={styles.tokenText}>Tokens Collected: {tokens}</Text>
+    </View>
+  );
+}
