@@ -57,6 +57,10 @@ export default function HabitTracker({ navigation }) {
     <View style={styles.container}>
       <Text style={styles.text}>Track your good habits!</Text>
       <Button title="Back to Home" onPress={() => navigation.navigate('IntroScreen')} />
+      <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+        <Icon name="arrow-back" size={24} color="#ffffff" />
+      </TouchableOpacity>
+
     </View>
   );
 }
