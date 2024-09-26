@@ -24,3 +24,9 @@ export default function AccessibilitySettings({ navigation }) {
           onValueChange={(value) => setHighContrast(value)}
         />
       </View>
+      <View style={styles.option}>
+        <Text style={styles.optionText}>Large Text</Text>
+        <Switch
+          value={largeText}
+          onValueChange={(value) => setLargeText(value)}
+        />
