@@ -73,6 +73,14 @@ export default function HabitTracker({ navigation }) {
             </Text>
             {!item.completed && (
               <TouchableOpacity style={styles.completeButton} onPress={() => handleTaskCompletion(item.id)}>
+                <Text style={styles.buttonText}>Complete</Text>
+              </TouchableOpacity>
+            )}
+          </View>
+        )}
+      />
+
+      <Text style={styles.tokenText}>Tokens Collected: {tokens}</Text>
     </View>
   );
 }
