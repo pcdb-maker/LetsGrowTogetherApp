@@ -8,6 +8,19 @@ export default function WaterReminder({ navigation }) {
   const [tokens, setTokens] = useState(0);
   const goal = 8;
   const progressAnim = useRef(new Animated.Value(0)).current;
+
+  // Load total tokens from AsyncStorage
+  const loadTokens = async () => {
+    try {
+      const savedTokens = await AsyncStorage.getItem('totalTokens');
+      if (savedTokens !== null) {
+        setTokens(parseInt(savedTokens));
+      }
+    } catch (error) {
+      console.error('Failed to load tokens:', error);
+    }
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Remember to drink water!</Text>
