@@ -41,7 +41,7 @@ export default function TitleScreen({ navigation }) {
         </Animated.Text>
       ) : (
         <>
-          <Text style={styles.title}>Executive FUNction App</Text>
+          <Text style={styles.title}>TESTExecutive FUNction App</Text>
          <br></br>
       <Text style={styles.paragraph}>
         We understand that people who identify as neurodiverse can struggle with executive functioning.
