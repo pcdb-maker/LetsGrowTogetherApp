@@ -107,3 +107,45 @@ export default function WaterReminder({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20, backgroundColor: '#f0f4f8' },
+  title: { fontSize: 28, fontWeight: 'bold', marginBottom: 20, color: '#2d2d2d' },
+  text: { fontSize: 20, marginBottom: 20, color: '#4a4a4a' },
+  buttonContainer: { flexDirection: 'row', justifyContent: 'space-between', width: '80%', marginBottom: 20 },
+  button: {
+    backgroundColor: '#6c63ff',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 25,
+    alignItems: 'center',
+    width: '45%',
+  },
+  buttonText: { color: '#ffffff', fontSize: 16, fontWeight: 'bold' },
+  removeButton: { backgroundColor: '#ff6b6b' },
+  progressBar: {
+    width: '80%',
+    height: 20,
+    backgroundColor: '#e0e0e0',
+    borderRadius: 10,
+    overflow: 'hidden',
+    marginBottom: 20,
+  },
+  progressFill: {
+    height: '100%',
+    backgroundColor: '#6c63ff',
+  },
+  tokenText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginTop: 20,
+    color: '#4a4a4a',
+  },
+  backButton: {
+    position: 'absolute',
+    top: 40,
+    left: 20,
+    backgroundColor: '#6c63ff',
+    padding: 10,
+    borderRadius: 20,
+    zIndex: 1000,
+  },
+});
