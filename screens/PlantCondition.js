@@ -62,3 +62,13 @@ export default function PlantGrowth({ navigation }) {
         <Icon name="arrow-back" size={24} color="#ffffff" />
       </TouchableOpacity>
 
+      <Text style={styles.title}>Your Plant</Text>
+      <Text style={styles.subtitle}>Tokens Collected: {tokens}</Text>
+      <Text style={styles.subtitle}>Current Stage: {currentStage.stage}</Text>
+      {nextStageTokens > 0 && (
+        <Text style={styles.subtitle}>
+          Tokens needed for the next stage: {nextStageTokens}
+        </Text>
+      )}
+
+      {currentStage.image && (
