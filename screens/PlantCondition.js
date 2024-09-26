@@ -41,3 +41,10 @@ export default function PlantGrowth({ navigation }) {
     }
   };
 
+  const determineGrowthStage = () => {
+    const stage = plantStages.find(stage => tokens >= stage.minTokens && (stage.maxTokens === undefined || tokens <= stage.maxTokens));
+    setCurrentStage(stage || plantStages[0]);
+    const nextStage = plantStages.find(stage => stage.minTokens > tokens);
+    setNextStageTokens(nextStage ? nextStage.minTokens - tokens : 0);
+  };
+
