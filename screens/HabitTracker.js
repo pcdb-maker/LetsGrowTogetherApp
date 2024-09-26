@@ -10,6 +10,19 @@ export default function HabitTracker({ navigation }) {
     { id: '3', title: 'Read a Book', completed: false },
     { id: '4', title: 'Plan Tomorrow’s Schedule', completed: false },
   ]);
+  const [tokens, setTokens] = useState(0);
+
+  // Load total tokens from AsyncStorage
+  const loadTokens = async () => {
+    try {
+      const savedTokens = await AsyncStorage.getItem('totalTokens');
+      if (savedTokens !== null) {
+        setTokens(parseInt(savedTokens));
+      }
+    } catch (error) {
+      console.error('Failed to load tokens:', error);
+    }
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Track your good habits!</Text>
