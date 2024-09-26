@@ -17,3 +17,10 @@ export default function AccessibilitySettings({ navigation }) {
       <Text style={styles.title}>Accessibility Settings</Text>
 
       {/* Accessibility Options */}
+      <View style={styles.option}>
+        <Text style={styles.optionText}>High Contrast Mode</Text>
+        <Switch
+          value={highContrast}
+          onValueChange={(value) => setHighContrast(value)}
+        />
+      </View>
