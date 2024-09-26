@@ -82,3 +82,29 @@ export default function SensoryBreak({ navigation }) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20, backgroundColor: '#f0f4f8' },
+  title: { fontSize: 28, fontWeight: 'bold', marginBottom: 20, color: '#2d2d2d' },
+  activityText: { fontSize: 20, fontStyle: 'italic', textAlign: 'center', marginBottom: 30, color: '#333' },
+  button: {
+    backgroundColor: '#6c63ff',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 25,
+    alignItems: 'center',
+    width: '60%',
+    marginVertical: 10,
+  },
+  buttonText: { color: '#ffffff', fontSize: 16, fontWeight: 'bold' },
+  backButton: {
+    position: 'absolute',
+    top: 40,
+    left: 20,
+    backgroundColor: '#6c63ff',
+    padding: 10,
+    borderRadius: 20,
+    zIndex: 1000,
+  },
+  tokenText: { fontSize: 18, fontWeight: 'bold', marginTop: 20, color: '#4a4a4a' },
+});
