@@ -20,3 +20,13 @@ export default function PlantGrowth({ navigation }) {
     { stage: 'grown-plant', minTokens: 15, image: grownPlantImage },
   ];
 
+  const loadTokens = async () => {
+    try {
+      const savedTokens = await AsyncStorage.getItem('totalTokens');
+      if (savedTokens !== null) {
+        setTokens(parseInt(savedTokens));
+      }
+    } catch (error) {
+      console.error('Failed to load tokens:', error);
+    }
+  };
