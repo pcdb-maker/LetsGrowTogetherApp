@@ -18,6 +18,7 @@ export default function IntroScreen({ navigation }) {
 
       {/* Content Wrapper to Move Everything Down */}
       <View style={styles.contentWrapper}>
+        <Text style={styles.title}>Lets Grow Together!</Text>
         <Text style={styles.title}>Welcome to the Executive FUNction Application.</Text>
         <Text style={styles.paragraph}>
         Designed to keep you encouraged while you maintain positive habits. Logging daily habits like drinking water and completing tasks will help both you and your plant grow.
